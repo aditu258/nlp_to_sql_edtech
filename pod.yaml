@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nlp-to-sql-pod
+spec:
+  containers:
+    - name: nlp-to-sql
+      image: nlp-to-sql-edtech:latest
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 8000
+      env:
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: openai-secret
+              key: OPENAI_API_KEY
+      resources:
+        limits:
+          memory: "512Mi"
+          cpu: "500m"
