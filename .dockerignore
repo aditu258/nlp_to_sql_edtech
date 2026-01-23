@@ -2,4 +2,4 @@ __pycache__/
 .pytest_cache/
 .env
 edtech.db
-tests/
+tests/ 
