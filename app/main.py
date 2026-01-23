@@ -18,7 +18,7 @@ def seed_database():
     if db.query(models.Student).first():
         db.close()
         return 
-    students = [
+    students=[
         models.Student(name="Aditya", grade="A"),
         models.Student(name="Rahul", grade="B"),
         models.Student(name="Sneha", grade="A"),
@@ -33,7 +33,7 @@ def seed_database():
     db.add_all(students)
     db.commit()
     
-    courses = [
+    courses=[
         models.Course(name="Python", category="Programming"),
         models.Course(name="Machine Learning", category="AI"),
         models.Course(name="Data Science", category="AI"),
@@ -43,7 +43,7 @@ def seed_database():
     db.add_all(courses)
     db.commit()
 
-    enrollments = [
+    enrollments=[
         models.Enrollment(student_id=1, course_id=1),
         models.Enrollment(student_id=2, course_id=1),
         models.Enrollment(student_id=3, course_id=1),
