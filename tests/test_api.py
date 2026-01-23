@@ -17,7 +17,7 @@ def test_query_endpoint():
 def test_stats_endpoint():
     response=client.get("/stats")
     assert response.status_code == 200
-    data = response.json()
+    data=response.json()
     assert "total_queries" in data
     assert "most_common_keywords" in data
     assert "slowest_query" in data
