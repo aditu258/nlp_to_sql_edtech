@@ -31,6 +31,7 @@ The application is built using FastAPI, SQLAlchemy, OpenAI-based NLP-to-SQL conv
 - pytest
 - Docker
 - Kubernetes (Docker Desktop)
+- Spacy
 
 ---
 
